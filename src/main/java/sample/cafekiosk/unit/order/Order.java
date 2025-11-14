@@ -11,6 +11,7 @@ import java.util.List;
 @RequiredArgsConstructor
 public class Order {
 
+    // 2개 인자 전달 필요
     private final LocalDateTime orderDateTime;
     private final List<Beverage> beverages;
 }
