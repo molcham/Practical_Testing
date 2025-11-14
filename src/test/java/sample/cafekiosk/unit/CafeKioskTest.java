@@ -89,6 +89,20 @@ public class CafeKioskTest {
 
     }
 
+    @Test
+    void calculateTotalPrice() {
+        CafeKiosk cafeKiosk = new CafeKiosk();
+        Americano americano = new Americano();
+        Latte latte = new Latte();
+
+        cafeKiosk.add(americano);
+        cafeKiosk.add(latte);
+
+        int totalPrice = cafeKiosk.calculateTotalPrice();
+
+        assertThat(totalPrice).isEqualTo(8500);
+    }
+
 
     // 이 테스트는 항상 성공하는 테스트일까? no => 테스트하는 시간에 따라 change
     @Test
